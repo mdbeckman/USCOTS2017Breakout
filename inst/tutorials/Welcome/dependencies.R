@@ -2,6 +2,5 @@ require(dplyr)
 require(learnr)
 require(DataComputing)
 require(ggformula)
-require(ggmap)
-require(checkr)
 require(ggplot2)
+

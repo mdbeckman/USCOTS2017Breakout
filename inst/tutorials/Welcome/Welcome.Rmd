@@ -9,12 +9,12 @@ library(learnr)
 library(tidyverse)
 library(USCOTS2017DC)
 library(ggformula)
-require(ggmap)
+# require(ggmap)
 require(DataComputing)
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
-## Starting your day with a coffee example
+## Start your data with coffee 
 
 I'm using this document to orient people to the software we are going to use in this workshop. I'm doing this via a document rather than in "lecture" mode because I want to spend time at the start of the workshop ensuring that all participants can access the software they will need.
 
@@ -58,9 +58,9 @@ Starbucks %>%
 ```
 Since this workshop is being held in State College, PA, let's look at the Starbuck situation there. The longitude of State College is -77.9 degrees; the latitude is 40.8 degrees.
 
-One way to restrict the graphic to the State College area is to instruct the graphics system to use specific bounds on the x- and y-axes.
-```{r eval = FALSE}
-gf_lims(x = -77.9 + c(-.5, .5), y = 40.8 + c(-.5, .5))
+One way to restrict the graphic to the State College area is to instruct the graphics system to use specific bounds on the x- and y-axes. The next command will restrict the displayed part of a graphic to $\pm$ 0.25 degree around the State College location.
+```{r eval = FALSE, echo = TRUE}
+gf_lims(x = -77.9 + c(-.25, .25), y = 40.8 + c(-.25, .25))
 ```
 Go back to the previous code block and add the above line to the sequence of commands. Put it on its own line. And make sure to connect the new line to the previous lines by putting the `%>%` token at the end of the line before this one.
 
@@ -68,16 +68,29 @@ You can get surprisingly far with a simple point plot, but the State College plo
 
 One can have a meaningful debate about whether it's best to start with the basics (e.g. a point plot) or instead use techniques that are more of a match for the graphics our students are encountering everyday. Let's put it to an empirical test by making a plot that's closer to everyday graphics.
 
-```{r starbucks-3, exercise = TRUE}
-library(ggmap)
-
+```{r starbucks-3, eval = FALSE}
 # get_map("State College, PA", zoom = 12, maptype = "toner") %>%
 state_college_map %>%
 ggmap() %>%
-gf_point(lat ~ long + alpha:0.5 + color:"blue", data = Starbucks)  
+gf_point(lat ~ long + alpha:0.5 + color:"blue", data = Starbucks)
+```
+```{r out.width = "90%"}
+knitr::include_graphics("images/state-college-map.png")
 ```
 
 For the sake of speed, not knowing how fast our internet connections will be, I've cached the map under the name `state_college_map`. The statement that brings in the map directly from the internet is commented out in the first line of the code block. If you want to play with the zoom level or the location, uncomment that line and instead comment out the line `state_college_map %>%`.
+
+## Is this RStudio?
+
+Yes and no. You are using a new product from RStudio called `learnr`. The `learnr` package allows you to create web documents in which a practically complete version of R is running. 
+
+Rather than typing commands in the console, or in an Rmd document, you will enter commands in the code blocks. To run the commands, press "Run code."
+
+Sometimes, you will find the code blocks pre-populated with working code or with fragments of code. These won't run properly until you edit the fragments into working R commands.
+
+Your own browser will keep track of changes you make in the code blocks. If you wish to clean the slate, press the "start over" link below the menu on the left side of the plate.
+
+Of course, every command you'll use in documents such as this will run in any version of R.
 
 ## Accounting for Starbucks locations
 
