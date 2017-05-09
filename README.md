@@ -1,2 +1,2 @@
-# USCOTS2017DC
-Resources for the USCOTS 2017 workshop on data science
+# USCOTS2017Breakout
+Resources for the USCOTS 2017 Breakout Session on teaching authentic data science with no prerequisites
