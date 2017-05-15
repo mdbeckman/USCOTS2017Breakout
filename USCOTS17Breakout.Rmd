@@ -24,6 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 Our students are capable of much more than we often give them credit for, and we can do more with them than we think.  With the proper framework to initially get things off the ground, they can be doing authentic data science in their first semester.
 
 ### Introduction to R (Penn State)  
+
 - Structure
     - 1 credit (i.e. one 50 min meeting per week; semester length)
   	- Reading quiz before class each week
@@ -31,10 +32,10 @@ Our students are capable of much more than we often give them credit for, and we
 		- Homework set after class each week
     - Final project at end of semester
 - Students
-    - 30 students (33 begining of semester)
+    - 33 students (3 dropped)
     - most did have a STAT course of some kind
     - 19 had never used R (another 12 had used it "a little")
-    
+    - Half were not (nor planned to) major in statistics or data science
 - Thoughts before, during, and after course
 - Pros & Cons
     - heavy use of `dplyr`, `ggplot2`, and other `tidyverse` packages (little base R)
@@ -77,13 +78,9 @@ Our students are capable of much more than we often give them credit for, and we
 - You will need a laptop connected to the Internet with a current web browser installed  
 - Feel free to work in small groups  
 
-## Popular Names
-
-
-## Bicycle Rental
-
-
-## Machine Learning
+1. [Popular Names Activity: https://dtkaplan.shinyapps.io/Names_over_time/](https://dtkaplan.shinyapps.io/Names_over_time/)
+2. [Bicycle Rental: https://dtkaplan.shinyapps.io/Bicycle_rentals/](https://dtkaplan.shinyapps.io/Bicycle_rentals/)
+3. [Machine Learning activity]
 
 
 ## Other things your students can do
@@ -102,6 +99,7 @@ Our students are capable of much more than we often give them credit for, and we
 - Basic machine learning
 - more graphs
     - incorporate 3rd or 4th variable
+    - interactive maps (i.e. leaflets)
     - choropleth maps & leaflets
 - Smoothing, confidence bands, etc
 - Find their own answers
@@ -166,10 +164,34 @@ Our students are capable of much more than we often give them credit for, and we
 
 ## Vegetarian Restaurant Analysis
 
-![](images/VegeterianRestaurants.png)
+```{r echo=FALSE, include=FALSE}
+library(tidyverse)
+library(leaflet) 
 
-- exploring trends among vegeterian and vegan restaurants
+data <- read.csv("data-raw/restaurants.csv")
 
+# Student Code
+data1<-unique(data) 
+data2<-na.omit(data1)
+
+RestaurantMap <-
+ leaflet(data2) %>%
+ addTiles() %>%
+ addCircleMarkers(radius = 2, color = "red") %>%
+ setView( lng =-73.935242, lat =40.730610, zoom = 12)  #New York
+```
+
+```{r echo=FALSE}
+RestaurantMap
+
+### Static image if needed ###
+# ![](images/VegeterianRestaurants.png)
+```
+
+
+- exploring trends among restaurants that advertise vegeterian and vegan fare
+- basic data wrangling operations: `select()`, `group_by()`, `summarise()`, `mutate()`
+- interactive map (i.e. leaflet) shows locations of such restaurants throughout the U.S.
 
 
 ## Other interesting projects
