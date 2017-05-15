@@ -1,0 +1,209 @@
+---
+title: "Teaching authentic data science without prerequisites"
+author: |
+  | **Matthew Beckman**
+  | *Penn State University*
+  | 
+  | **Daniel Kaplan**
+  | *Macalester College*
+  
+date: |
+  | U.S. Conference on Teaching Statistics
+  | University Park, PA
+  | May 20, 2017
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Motivation & Background
+
+### Main Idea  
+Our students are capable of much more than we often give them credit for, and we can do more with them than we think.  With the proper framework to initially get things off the ground, they can be doing authentic data science in their first semester.
+
+### Introduction to R (Penn State)  
+- Structure
+    - 1 credit (i.e. one 50 min meeting per week; semester length)
+  	- Reading quiz before class each week
+		- Group mini-project began in class each week
+		- Homework set after class each week
+    - Final project at end of semester
+- Students
+    - 30 students (33 begining of semester)
+    - most did have a STAT course of some kind
+    - 19 had never used R (another 12 had used it "a little")
+    
+- Thoughts before, during, and after course
+- Pros & Cons
+    - heavy use of `dplyr`, `ggplot2`, and other `tidyverse` packages (little base R)
+    - terminology (e.g.,  wrangling, glyph-ready, tidy, pipe)
+- Learned some new things during the semester
+    
+### Data Computing Fundamentals (Macalester)  
+
+
+## Tools
+
+### Working code 
+
+- Provide students with concise and consistent framework of commands (& templates)
+- Students generally start with working code that they can modify
+- Scaffold with interactive tools
+    - File paths (`file.choose()`)
+	  - Inspecting data (`View()`)
+		- Visualizations (`xyzGraphBuilder()`)
+- Interactive commands produce working code that students can then analyze and modify
+
+### RMarkdown
+
+- prevents excessive reliance on interactive commands (they don't work!)
+- advocates common template
+    - HTML with embedded Rmd
+    - promotes reproducible research habits
+    - Students began using it in other STAT classes, and faculty **loved** it
+- other document types accessible (LaTeX, slides, etc)
+
+### Other Resources
+
+- RStudio Cheat Sheets
+- DataCamp (full access mid-semester)
+- Required weekly ask & answer on Piazza >> class stack exchange
+
+## Sample Activities
+
+- Let's work through a few examples that illustrate the sort of things your students can do in a course like this **without** prerequisites...  
+- You will need a laptop connected to the Internet with a current web browser installed  
+- Feel free to work in small groups  
+
+## Popular Names
+
+
+## Bicycle Rental
+
+
+## Machine Learning
+
+
+## Other things your students can do
+
+- Data operations
+    - Join tables (left, inner, full, anti)
+    - Reshape (convert from wide to narrow and back)
+    - Work with dates
+- Read data from various sources: 
+    - HTML tables (e.g. Wikipedia)
+    - Yahoo Finance 
+    - CSV (web & local)
+- Regular expressions
+    - identify and/or replace a pattern in a character string
+    - extracting patterns
+- Basic machine learning
+- more graphs
+    - incorporate 3rd or 4th variable
+    - choropleth maps & leaflets
+- Smoothing, confidence bands, etc
+- Find their own answers
+    - R help
+    - published "Cheat Sheets"
+    - web forums
+
+
+## Student Outcomes
+
+
+## FIFA World Rankings Analysis 
+
+![](images/FIFATrends.png)
+
+- investigate trends among confederations and teams over last 10 years
+- scrapes HTML table from [FIFA World Ranking Website](http://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html)  
+- wrote `while` loop to utilize an index in the URL to scrape monthly data tables 
+- `join` operation adds each monthly table to the master
+- reshape data from wide to narrow using `gather()`
+- basic data wrangling operations: `select()`, `filter()`, `group_by()`, `summarise()`
+- `ggplot()` graphics
+- submitted HTML document with embedded .Rmd
+
+
+## Movies in the 21st Century
+
+![](images/BoxOfficeSales.png)
+
+- scrapes HTML table from [www.the-numbers.com](http://www.the-numbers.com/market/2015/top-grossing-movies)
+- basic data wrangling operations: `filter()`, `group_by()`, `summarise()`, `mutate()`
+- `ggplot()` graphics exploring relationships among ticket sales, genre, year, studio, etc
+- utilized faceting in several places to invite visual comparisons between groups (e.g. MPAA rating)
+
+
+## Stanley Cup Winners
+
+
+- investigating trends and commonalities among Stanley Cup champions
+- submitted both LaTeX & HTML with embedded .Rmd
+- CSV data sourced from Kaggle
+- basic data wrangling operations: `select()`, `filter()`, `group_by()`, `arrange()`, `mutate()`
+- reshape data from wide to narrow using `gather()` for plotting
+- `ggplot()` graphics showing monthly win percentages throughout season for each team
+- constructed list containing data frame for champions from 1970 to 2012
+- used a `for` loop to iterate over list then create and store `ggplot()` graphic for each champion in a new list
+- used `party::ctree()` to build competing models based on recursive partitioning 
+- likelihood-based model comparison
+
+![](images/StanleyCupML.png)
+
+
+
+## 2013 FBI Crime Reporting
+
+![](images/PhysicalCrime.png)
+
+- loaded data from [FBI website](https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/table-8/table_8_offenses_known_to_law_enforcement_by_state_by_city_2013.xls/view)
+- basic data wrangling operations: `select()`, `group_by()`, `summarise()`, `mutate()`
+- `USMap()` choropleths for comparisons among states 
+- `ggplot()` graph represents association between physical & non-physical crime per capita by state
+
+## Vegetarian Restaurant Analysis
+
+![](images/VegeterianRestaurants.png)
+
+- exploring trends among vegeterian and vegan restaurants
+
+
+
+## Other interesting projects
+
+### Leading Causes of Death in NYC
+
+- investigation of leading causes of death in NYC
+- investigated Alziemers as well citing familial significance
+
+### Analysis of Thanksgiving
+
+- investigation of survey data about Thanksgiving traditions
+- international student studying cultural norms
+
+### MLB Free Agent Analysis 
+
+- analysis of MLB free agents; compare/contrast several popular metrics 
+- Exploratory data analysis of free agents hitters, relief pitchers, & starting pitchers
+- Comparison of all three using "wins above replacement" (WAR) and contrasts with other metrics 
+
+### History of Reddit
+
+- scrape Reddit data from web
+- analysis of new threads over time as well as top Subreddits and SubredditSubs
+- used regular expressions to clean text data and identify Subreddits and SubredditSubs
+
+
+## Course Details
+
+### Introduction to R (Penn State)  
+
+- Used Data Camp during first weeks while students configure Rstudio
+- Required weekly ask & answer on Piazza >> class stack exchange
+- RStudio Server (with Chromebooks)
+- GitHub
+
+
