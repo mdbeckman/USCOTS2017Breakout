@@ -18,36 +18,37 @@ output: slidy_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Motivation & Background
+## Motivation & Background: Main Idea  
 
-### Main Idea  
 Our students are capable of much more than we often give them credit for, and we can do more with them than we think.  With the proper framework to initially get things off the ground, they can be doing authentic data science in their first semester.
 
-### Introduction to R (Penn State)  
+![](images/stat184.jpg)
 
-- Structure
-    - 1 credit (i.e. one 50 min meeting per week; semester length)
-  	- Reading quiz before class each week
-		- Group mini-project began in class each week
-		- Homework set after class each week
-    - Final project at end of semester
-- Students
-    - 33 students (3 dropped)
-    - most did have a STAT course of some kind
-    - 19 had never used R (another 12 had used it "a little")
-    - Half were not (nor planned to) major in statistics or data science
-- Thoughts before, during, and after course
-- Pros & Cons
-    - heavy use of `dplyr`, `ggplot2`, and other `tidyverse` packages (little base R)
-    - terminology (e.g.,  wrangling, glyph-ready, tidy, pipe)
-- Learned some new things during the semester
-    
-### Data Computing Fundamentals (Macalester)  
+## Motivation & Background: Introduction to R (Penn State)  
+
+### Structure
+
+- 1 credit (i.e. one 50 min meeting per week; semester length)
+- Reading quiz before class each week
+- Group mini-project began in class each week
+- Homework set after class each week
+- Final project at end of semester
+
+### Students
+- 33 students (3 dropped)
+- most did have a STAT course of some kind (including AP)
+- 19 had never used R (another 12 had used it "a little")
+- Half were not (nor planned to) major in statistics or data science
+
+### Thoughts before, during, and after course
+- heavy use of `dplyr`, `ggplot2`, and other `tidyverse` packages (little base R)
+- terminology (e.g.,  wrangling, glyph-ready, tidy, pipe)
+- included topics completely new to me (e.g., scraping HTML tables, leaflets)
+
+## Motivation & Background: Data Computing Fundamentals (Macalester)  
 
 
-## Tools
-
-### Working code 
+## Tools: Working code 
 
 - Provide students with concise and consistent framework of commands (& templates)
 - Students generally start with working code that they can modify
@@ -57,7 +58,7 @@ Our students are capable of much more than we often give them credit for, and we
 		- Visualizations (`xyzGraphBuilder()`)
 - Interactive commands produce working code that students can then analyze and modify
 
-### RMarkdown
+## Tools: RMarkdown
 
 - prevents excessive reliance on interactive commands (they don't work!)
 - advocates common template
@@ -66,11 +67,19 @@ Our students are capable of much more than we often give them credit for, and we
     - Students began using it in other STAT classes, and faculty **loved** it
 - other document types accessible (LaTeX, slides, etc)
 
-### Other Resources
+## Tools: Other Resources
 
 - RStudio Cheat Sheets
 - DataCamp (full access mid-semester)
 - Required weekly ask & answer on Piazza >> class stack exchange
+
+```{r fig.width=10, fig.height=2, echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("images/cheatsheet.png")
+grid.raster(img)
+```
+
 
 ## Sample Activities
 
@@ -83,7 +92,13 @@ Our students are capable of much more than we often give them credit for, and we
 3. [Machine Learning activity]
 
 
-## Other things your students can do
+## Student Outcomes: Core Skills
+
+- data wrangling skills
+- data visualization tools
+- ability to **find** answers 
+
+## Student Outcomes: Broad Exposure
 
 - Data operations
     - Join tables (left, inner, full, anti)
@@ -108,8 +123,13 @@ Our students are capable of much more than we often give them credit for, and we
     - web forums
 
 
-## Student Outcomes
+## PSU Final Project
 
+- Reproducible work (i.e. HTML with embedded .Rmd that runs cold)
+- Use real data (not loaded from an R package)
+- Data wrangling proficiency
+- Visualization proficiency
+- High quality code, narrative, and overall product
 
 ## FIFA World Rankings Analysis 
 
@@ -217,6 +237,9 @@ RestaurantMap
 - scrape Reddit data from web
 - analysis of new threads over time as well as top Subreddits and SubredditSubs
 - used regular expressions to clean text data and identify Subreddits and SubredditSubs
+
+## Student Feedback
+
 
 
 ## Course Details
