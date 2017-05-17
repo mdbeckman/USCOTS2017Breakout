@@ -15,21 +15,23 @@ output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE}
+library(png)
+library(grid)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Motivation & Background: Main Idea  
 
-Our students are capable of much more than we often give them credit for, and we can do more with them than we think.  With the proper framework to initially get things off the ground, they can be doing authentic data science in their first semester.
+![](images/thePoint.jpg)
 
-![](images/stat184.jpg)
+We can do much more with students in a first course in R than we might think.  With a sound framework to get things off the ground, they can be doing authentic data science in their first semester.
 
 ## Motivation & Background: Introduction to R (Penn State)  
 
 ### Structure
 
 - 1 credit (i.e. one 50 min meeting per week; semester length)
-- Reading quiz before class each week
+- Reading quiz before class each week  
 - Group mini-project began in class each week
 - Homework set after class each week
 - Final project at end of semester
@@ -45,7 +47,7 @@ Our students are capable of much more than we often give them credit for, and we
 - terminology (e.g.,  wrangling, glyph-ready, tidy, pipe)
 - included topics completely new to me (e.g., scraping HTML tables, leaflets)
 
-## Motivation & Background: Data Computing Fundamentals (Macalester)  
+## Motivation & Background: Data Computing (Macalester)  
 
 
 ## Tools: Working code 
@@ -54,13 +56,13 @@ Our students are capable of much more than we often give them credit for, and we
 - Students generally start with working code that they can modify
 - Scaffold with interactive tools
     - File paths (`file.choose()`)
-	  - Inspecting data (`View()`)
-		- Visualizations (`xyzGraphBuilder()`)
-- Interactive commands produce working code that students can then analyze and modify
+    - Inspecting data (`View()`)
+    - Visualizations (`xyzGraphBuilder()`)
+- Some interactive commands produce working code that students can then analyze and modify
 
 ## Tools: RMarkdown
 
-- prevents excessive reliance on interactive commands (they don't work!)
+- prevents excessive dependence on interactive commands 
 - advocates common template
     - HTML with embedded Rmd
     - promotes reproducible research habits
@@ -73,12 +75,8 @@ Our students are capable of much more than we often give them credit for, and we
 - DataCamp (full access mid-semester)
 - Required weekly ask & answer on Piazza >> class stack exchange
 
-```{r fig.width=10, fig.height=2, echo=FALSE}
-library(png)
-library(grid)
-img <- readPNG("images/cheatsheet.png")
-grid.raster(img)
-```
+![](images/piazza1.png) 
+![](images/piazza2.png)
 
 
 ## Sample Activities
@@ -92,11 +90,18 @@ grid.raster(img)
 3. [Machine Learning activity]
 
 
+
 ## Student Outcomes: Core Skills
 
 - data wrangling skills
 - data visualization tools
 - ability to **find** answers 
+
+```{r fig.width=10, echo=FALSE}
+img3 <- readPNG("images/stat184crop.png")
+grid.raster(img3)
+```
+
 
 ## Student Outcomes: Broad Exposure
 
@@ -203,11 +208,16 @@ RestaurantMap <-
 
 ```{r echo=FALSE}
 RestaurantMap
-
-### Static image if needed ###
-# ![](images/VegeterianRestaurants.png)
 ```
 
+
+- exploring trends among restaurants that advertise vegeterian and vegan fare
+- basic data wrangling operations: `select()`, `group_by()`, `summarise()`, `mutate()`
+- interactive map (i.e. leaflet) shows locations of such restaurants throughout the U.S.
+
+## Vegetarian Restaurant Analysis (Static)
+
+![](images/VegeterianRestaurants.png)
 
 - exploring trends among restaurants that advertise vegeterian and vegan fare
 - basic data wrangling operations: `select()`, `group_by()`, `summarise()`, `mutate()`
