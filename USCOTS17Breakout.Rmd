@@ -17,6 +17,9 @@ output: slidy_presentation
 ```{r setup, include=FALSE}
 library(png)
 library(grid)
+library(tidyverse)
+library(leaflet) 
+
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -166,10 +169,7 @@ grid.raster(img3)
 - investigating trends and commonalities among Stanley Cup champions
 - submitted both LaTeX & HTML with embedded .Rmd
 - CSV data sourced from Kaggle
-- basic data wrangling operations: `select()`, `filter()`, `group_by()`, `arrange()`, `mutate()`
-- reshape data from wide to narrow using `gather()` for plotting
-- `ggplot()` graphics showing monthly win percentages throughout season for each team
-- constructed list containing data frame for champions from 1970 to 2012
+- constructed list containing data frames for champions from 1970 to 2012
 - used a `for` loop to iterate over list then create and store `ggplot()` graphic for each champion in a new list
 - used `party::ctree()` to build competing models based on recursive partitioning 
 - likelihood-based model comparison
@@ -182,7 +182,7 @@ grid.raster(img3)
 
 ![](images/PhysicalCrime.png)
 
-- loaded data from [FBI website](https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/table-8/table_8_offenses_known_to_law_enforcement_by_state_by_city_2013.xls/view)
+- loaded data from [FBI website](https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/table-8/table_8_offenses_known_to_law_enforcement_by_state_by_city_2013.xls/view) 
 - basic data wrangling operations: `select()`, `group_by()`, `summarise()`, `mutate()`
 - `USMap()` choropleths for comparisons among states 
 - `ggplot()` graph represents association between physical & non-physical crime per capita by state
@@ -190,9 +190,6 @@ grid.raster(img3)
 ## Vegetarian Restaurant Analysis
 
 ```{r echo=FALSE, include=FALSE}
-library(tidyverse)
-library(leaflet) 
-
 data <- read.csv("data-raw/restaurants.csv")
 
 # Student Code
