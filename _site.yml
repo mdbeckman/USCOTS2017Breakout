@@ -1,0 +1,17 @@
+name: "USCOTS 2017"
+output_dir: "docs"
+output:
+  html_document:
+    theme: readable
+include: ["Slides", "Activities", "Projects", "Presentations"]
+navbar:
+  title: "Data Science w/o pre-requisites"
+  left:
+    - text: "Abstract"
+      href: "https://www.causeweb.org/cause/uscots/uscots17/breakout/4E"
+    - text: "Discussion"
+      href: "https://docs.google.com/document/d/1wu2ss-dHsF3y18K59zxwKATe87DnJnGOE49_U1nCbfw/edit?usp=sharing"
+    - text: "Resources"
+      href: "Resources.html"
+    - text: "Slides"
+      href: "Slides/USCOTS17Breakout.html"
