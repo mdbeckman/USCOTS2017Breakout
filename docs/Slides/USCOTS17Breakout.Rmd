@@ -80,11 +80,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Sample Activities
 
-- Let's work through a few examples that illustrate the sort of things your students can do in a course like this **without** prerequisites...  
+- Take a few minutes to work through a few examples that illustrate the sort of things students might do in a course like this **without** prerequisites...  
 - You will need a laptop connected to the Internet with a current web browser installed  
 - Feel free to work in small groups  
 
-<https://mdbeckman.github.io/USCOTS2017Breakout/>
+### <https://mdbeckman.github.io/USCOTS2017Breakout/>
 
 
 
@@ -167,8 +167,8 @@ RestaurantMap <-
  setView( lng =-73.935242, lat =40.730610, zoom = 12)  #New York
 ```
 
+### Student Code
 ```
-# Student Code
 data1<-unique(data) 
 data2<-na.omit(data1)
 
@@ -197,6 +197,12 @@ RestaurantMap
 
 ## Other interesting projects
 
+### History of Reddit
+
+- scrape Reddit data from web
+- analysis of new threads over time as well as top Subreddits and SubredditSubs
+- used regular expressions to clean text data and identify Subreddits and SubredditSubs
+
 ### Leading Causes of Death in NYC
 
 - investigation of leading causes of death in NYC
@@ -207,24 +213,12 @@ RestaurantMap
 - investigation of survey data about Thanksgiving traditions
 - international student studying cultural norms
 
-### MLB Free Agent Analysis 
-
-- analysis of MLB free agents; compare/contrast several popular metrics 
-- Exploratory data analysis of free agents hitters, relief pitchers, & starting pitchers
-- Comparison of all three using "wins above replacement" (WAR) and contrasts with other metrics 
-
-### History of Reddit
-
-- scrape Reddit data from web
-- analysis of new threads over time as well as top Subreddits and SubredditSubs
-- used regular expressions to clean text data and identify Subreddits and SubredditSubs
-
 
 ## Student Outcomes: Core Skills
 
 - data wrangling skills
 - data visualization tools
-- ability to **find** answers 
+- ability to find answers for themselves
 
 ```{r fig.width=10, echo=FALSE}
 img3 <- readPNG("images/stat184crop.png")
@@ -256,19 +250,21 @@ grid.raster(img3)
     - published "Cheat Sheets"
     - web forums
 
+## Where to go from here?
 
+### Feel free to revisit some of your initial thoughts about "authentic data science"  
 
-## Student Feedback
+- What should be covered by a meaningful first course in data science?  
+- What ambitions do you have for students taking a first data-science course?  
+- In what ways should an authentic data-science course differ from intro stats?  
 
+### ..."without prerequisites"  
 
+- What reasonable expectations about students’ abilities and skills coming into the course satisfy “without prerequisites” in the context of your students?
+- What computing skills are faithful to the idea of “without prerequisites?”
 
-## Course Details
+### ...or maybe consider some new questions
 
-### Introduction to R (Penn State)  
-
-- Used Data Camp during first weeks while students configure Rstudio
-- Required weekly ask & answer on Piazza >> class stack exchange
-- RStudio Server (with Chromebooks)
-- GitHub
-
+- What are pros/cons of this sort of course?  
+- Should such a course have a place within a statistics program (major, minor, concentration, etc)?  
 
