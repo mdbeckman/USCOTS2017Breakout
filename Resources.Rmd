@@ -1,0 +1,19 @@
+
+<br>
+<br>
+<br>
+
+
+## Additional resources 
+
+1. Web site for the [Macalester College course](http://dtkaplan.github.io/comp110)
+2. [StatPREP project](http://statPREP.org) and [draft tutorials](http://statPREP.org/Resources) for instructor development.
+3. [*Data Computing* textbook](http://project-mosaic-books.com/?page_id=16)
+    Excerpts: Chapter [one](http://www.mosaic-web.org/go/datasets/DCF/Excerpts/Review-Chap-01.pdf), [two](http://www.mosaic-web.org/go/datasets/DCF/Excerpts/Review-Chap-02.pdf), [three](http://www.mosaic-web.org/go/datasets/DCF/Excerpts/Review-Chap-03.pdf), [four](http://www.mosaic-web.org/go/datasets/DCF/Excerpts/Review-Chap-04.pdf), [five](http://www.mosaic-web.org/go/datasets/DCF/Excerpts/Review-Chap-05.pdf), [six](http://www.mosaic-web.org/go/datasets/DCF/Excerpts/Review-Chap-06.pdf), [seven](http://www.mosaic-web.org/go/datasets/DCF/Excerpts/Review-Chap-07.pdf)
+
+### Examples of online exercises:
+
+These are keyed to the chapters of the *Data Computing* book. This summer, all the exercises in the book will be translated to this interactive format. Facilities for logging student answers (for grading purposes) will be added to the documents.
+
+Chapters [one](https://dtkaplan.shinyapps.io/Chapter-01-collection/), [two](https://dtkaplan.shinyapps.io/chapter-02-collection5/), [three](https://dtkaplan.shinyapps.io/Chapter-03-collection/), [four](https://dtkaplan.shinyapps.io/Chapter-04-collection/), [five](https://dtkaplan.shinyapps.io/Chapter-05-collection/), [six](https://dtkaplan.shinyapps.io/Chapter-06-collection/), [seven](https://dtkaplan.shinyapps.io/Chapter-07-collection/), [eight](https://dtkaplan.shinyapps.io/Chapter-08-collection/), [nine](https://dtkaplan.shinyapps.io/Chapter-09-collection/)
+
