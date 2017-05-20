@@ -57,7 +57,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - Scaffold with interactive tools
     - Inspecting data (`View()`)
     - Visualizations (`xyzGraphBuilder()`)
-- Some interactive commands produce working code that students can then analyze and modify
+- interactive commands produce working code that students can then analyze and modify
 
 ## Tools: RMarkdown
 

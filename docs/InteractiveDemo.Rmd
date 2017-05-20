@@ -24,5 +24,16 @@ includeSourceDocuments()
 
 Using the `CPS85` data table, make this graphic: 
 
-![](images/InteractivePlot.png)
+![](Slides/images/InteractivePlot.png)
+
+
+# Solution 
+
+```{r, fig.height = 6, fig.width = 9}
+
+
+```
+
+
+
 
