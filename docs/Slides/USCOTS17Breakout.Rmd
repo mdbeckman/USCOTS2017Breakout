@@ -23,13 +23,7 @@ library(leaflet)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Motivation & Background: Main Idea  
-
-![](images/thePoint.jpg)
-
-We can do much more with students in a first course in R than we might think.  With a sound framework to get things off the ground, they can be doing authentic data science in their first semester.
-
-## Motivation & Background: Introduction to R (Penn State)  
+## Background: Introduction to R (Penn State)  
 
 ### Structure
 
@@ -40,17 +34,20 @@ We can do much more with students in a first course in R than we might think.  W
 - Final project at end of semester
 
 ### Students
+
 - 33 students (3 dropped)
 - most did have a STAT course of some kind (including AP)
 - 19 had never used R (another 12 had used it "a little")
 - Half were not (nor planned to) major in statistics or data science
 
 ### Thoughts before, during, and after course
+
 - heavy use of `dplyr`, `ggplot2`, and other `tidyverse` packages (little base R)
 - terminology (e.g.,  wrangling, glyph-ready, tidy, pipe)
 - included topics completely new to me (e.g., scraping HTML tables, leaflets)
 
-## Motivation & Background: Data Computing (Macalester)  
+## Background: Data Computing (Macalester)  
+
 
 
 ## Tools: Working code 
@@ -58,18 +55,17 @@ We can do much more with students in a first course in R than we might think.  W
 - Provide students with concise and consistent framework of commands (& templates)
 - Students generally start with working code that they can modify
 - Scaffold with interactive tools
-    - File paths (`file.choose()`)
     - Inspecting data (`View()`)
     - Visualizations (`xyzGraphBuilder()`)
 - Some interactive commands produce working code that students can then analyze and modify
 
 ## Tools: RMarkdown
 
-- prevents excessive dependence on interactive commands 
 - advocates common template
     - HTML with embedded Rmd
     - promotes reproducible research habits
     - Students began using it in other STAT classes, and faculty **loved** it
+- prevents excessive dependence on interactive commands 
 - other document types accessible (LaTeX, slides, etc)
 
 ## Tools: Other Resources
@@ -88,10 +84,7 @@ We can do much more with students in a first course in R than we might think.  W
 - You will need a laptop connected to the Internet with a current web browser installed  
 - Feel free to work in small groups  
 
-1. [Popular Names Activity: https://dtkaplan.shinyapps.io/Names_over_time/](https://dtkaplan.shinyapps.io/Names_over_time/)
-2. [Bicycle Rental: https://dtkaplan.shinyapps.io/Bicycle_rentals/](https://dtkaplan.shinyapps.io/Bicycle_rentals/)
-3. [Machine Learning activity]
-
+<https://mdbeckman.github.io/USCOTS2017Breakout/>
 
 
 ## Student Outcomes: Core Skills
@@ -190,7 +183,11 @@ grid.raster(img3)
 ## Vegetarian Restaurant Analysis
 
 ```{r echo=FALSE, include=FALSE}
-data <- read.csv("../_data-raw/restaurants.csv")
+data <- read.csv("restaurants.csv")
+```
+
+```{r echo=TRUE}
+
 
 # Student Code
 data1<-unique(data) 
