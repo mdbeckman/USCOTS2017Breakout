@@ -18,4 +18,4 @@ Please do take notes and add comments in the [discussion](https://docs.google.co
 
 ### The textbook we used
 
-*Data Computing* Daniel Kaplan (2015)
+[*Data Computing* Daniel Kaplan (2015)](http://project-mosaic-books.com/?page_id=16)
