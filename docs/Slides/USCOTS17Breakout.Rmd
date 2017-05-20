@@ -1,10 +1,10 @@
 ---
 title: "Teaching authentic data science without prerequisites"
 author: |
-  | **Matthew Beckman**
+  | **Matt Beckman**
   | *Penn State University*
   | 
-  | **Daniel Kaplan**
+  | **Danny Kaplan**
   | *Macalester College*
   
 date: |
@@ -44,7 +44,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - heavy use of `dplyr`, `ggplot2`, and other `tidyverse` packages (little base R)
 - terminology (e.g.,  wrangling, glyph-ready, tidy, pipe)
-- included topics completely new to me (e.g., scraping HTML tables, leaflets)
+- included topics completely new to Matt (e.g., scraping HTML tables, leaflets)
 
 ## Background: Data Computing (Macalester)  
 
@@ -86,42 +86,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <https://mdbeckman.github.io/USCOTS2017Breakout/>
 
-
-## Student Outcomes: Core Skills
-
-- data wrangling skills
-- data visualization tools
-- ability to **find** answers 
-
-```{r fig.width=10, echo=FALSE}
-img3 <- readPNG("images/stat184crop.png")
-grid.raster(img3)
-```
-
-
-## Student Outcomes: Broad Exposure
-
-- Data operations
-    - Join tables (left, inner, full, anti)
-    - Reshape (convert from wide to narrow and back)
-    - Work with dates
-- Read data from various sources: 
-    - HTML tables (e.g. Wikipedia)
-    - Yahoo Finance 
-    - CSV (web & local)
-- Regular expressions
-    - identify and/or replace a pattern in a character string
-    - extracting patterns
-- Basic machine learning
-- more graphs
-    - incorporate 3rd or 4th variable
-    - interactive maps (i.e. leaflets)
-    - choropleth maps & leaflets
-- Smoothing, confidence bands, etc
-- Find their own answers
-    - R help
-    - published "Cheat Sheets"
-    - web forums
 
 
 ## PSU Final Project
@@ -184,10 +148,6 @@ grid.raster(img3)
 
 ```{r echo=FALSE, include=FALSE}
 data <- read.csv("restaurants.csv")
-```
-
-```{r echo=TRUE}
-
 
 # Student Code
 data1<-unique(data) 
@@ -198,6 +158,20 @@ RestaurantMap <-
  addTiles() %>%
  addCircleMarkers(radius = 2, color = "red") %>%
  setView( lng =-73.935242, lat =40.730610, zoom = 12)  #New York
+```
+
+```
+# Student Code
+data1<-unique(data) 
+data2<-na.omit(data1)
+
+RestaurantMap <-
+ leaflet(data2) %>%
+ addTiles() %>%
+ addCircleMarkers(radius = 2, color = "red") %>%
+ setView( lng =-73.935242, lat =40.730610, zoom = 12)  #New York
+
+RestaurantMap
 ```
 
 ```{r echo=FALSE}
@@ -241,6 +215,45 @@ RestaurantMap
 - scrape Reddit data from web
 - analysis of new threads over time as well as top Subreddits and SubredditSubs
 - used regular expressions to clean text data and identify Subreddits and SubredditSubs
+
+
+## Student Outcomes: Core Skills
+
+- data wrangling skills
+- data visualization tools
+- ability to **find** answers 
+
+```{r fig.width=10, echo=FALSE}
+img3 <- readPNG("images/stat184crop.png")
+grid.raster(img3)
+```
+
+
+## Student Outcomes: Broad Exposure
+
+- Data operations
+    - Join tables (left, inner, full, anti)
+    - Reshape (convert from wide to narrow and back)
+    - Work with dates
+- Read data from various sources: 
+    - HTML tables (e.g. Wikipedia)
+    - Yahoo Finance 
+    - CSV (web & local)
+- Regular expressions
+    - identify and/or replace a pattern in a character string
+    - extracting patterns
+- Basic machine learning
+- more graphs
+    - incorporate 3rd or 4th variable
+    - interactive maps (i.e. leaflets)
+    - choropleth maps & leaflets
+- Smoothing, confidence bands, etc
+- Find their own answers
+    - R help
+    - published "Cheat Sheets"
+    - web forums
+
+
 
 ## Student Feedback
 
