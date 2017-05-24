@@ -1,7 +1,7 @@
 ---
 title: "Teaching authentic data science without prerequisites"
 author: |
-  | **Matthew Beckman**
+  | **Matt Beckman**
   | *Penn State University*
   | 
   | **Danny Kaplan**
